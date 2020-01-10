@@ -8,8 +8,16 @@ const mongoUri = 'mongodb+srv://root:toor@cluster0-ygila.mongodb.net/test?retryW
 mongoose.connect(mongoUri, {
     //prevents common warning messages in terminal
     useNewUrlParser: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useUnifiedTopology: true
 });
+mongoose.connection.on('connect', () => {
+    console.log('Connected to mongo instance');
+});
+mongoose.connection.on('error', (err) => {
+    console.error('Error connecting to mongo', err);
+})
+
 
 app.get('/', (req, res) => {
     res.send('Hi there!');
