@@ -1,15 +1,19 @@
+require('./models/User');
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const authRoutes = require('./routes/authRoutes');
+const requireAuth = require('./middlewares/requireAuth');
 
 const app = express();
 
+app.use(bodyParser.json());
 app.use(authRoutes);
 
 const mongoUri = 'mongodb+srv://root:toor@cluster0-ygila.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose.connect(mongoUri, {
-    //prevents common warning messages in terminal
+    //prevents warning messages in terminal
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
@@ -22,8 +26,8 @@ mongoose.connection.on('error', (err) => {
 })
 
 
-app.get('/', (req, res) => {
-    res.send('Hi there!');
+app.get('/', requireAuth, (req, res) => {
+    res.send(`Your email: ${req.user.email}`);
 });
 
 app.listen(3000, () => {
