@@ -35,18 +35,14 @@ userSchema.pre('save', function(next) {
 });
 
 //Do not refactor: using arrow function will set the value to context of this file, not the user
-userSchema.methods.comparePassword = function(candidatePassword) {
-    const user = this;
+userSchema.methods.comparePassword = function comparePassword(candidatePassword) {
     return new Promise((resolve, reject) => {
-        bcrypt.compare(candidatePassword, user.password, (err, isMatch) => {
+        bcrypt.compare(candidatePassword, this.password, (err, isMatch) => {
             if (err) {
                 return reject(err);
-            }
-            if (!isMatch) {
-                return reject(false);
-            }
-
+            } else {
             resolve(true);
+            }
         });
     })
 }
