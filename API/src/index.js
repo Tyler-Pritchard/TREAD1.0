@@ -1,6 +1,7 @@
+require('./models/User');
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = requre('body-parser');
+const bodyParser = require('body-parser');
 const authRoutes = require('./routes/authRoutes');
 
 const app = express();
@@ -11,7 +12,7 @@ app.use(authRoutes);
 const mongoUri = 'mongodb+srv://root:toor@cluster0-ygila.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose.connect(mongoUri, {
-    //prevents common warning messages in terminal
+    //prevents warning messages in terminal
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
