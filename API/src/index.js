@@ -6,6 +6,7 @@ const app = express();
 const mongoUri = 'mongodb+srv://root:toor@cluster0-ygila.mongodb.net/test?retryWrites=true&w=majority'
 
 mongoose.connect(mongoUri, {
+    //prevents common warning messages in terminal
     useNewUrlParser: true,
     useCreateIndex: true
 });
