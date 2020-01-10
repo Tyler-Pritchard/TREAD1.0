@@ -9,9 +9,9 @@ mongoose.connect(mongoUri, {
     //prevents common warning messages in terminal
     useNewUrlParser: true,
     useCreateIndex: true,
-    // useUnifiedTopology: true
+    useUnifiedTopology: true
 });
-mongoose.connection.on('connect', () => {
+mongoose.connection.on('connected', () => {
     console.log('Connected to mongo instance');
 });
 mongoose.connection.on('error', (err) => {
