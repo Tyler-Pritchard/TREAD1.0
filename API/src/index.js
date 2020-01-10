@@ -9,7 +9,7 @@ mongoose.connect(mongoUri, {
     //prevents common warning messages in terminal
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    // useUnifiedTopology: true
 });
 mongoose.connection.on('connect', () => {
     console.log('Connected to mongo instance');
