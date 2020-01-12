@@ -2,7 +2,7 @@ Brought to you by experts in city survival, criminal justice and modern mobile t
 
 Native App Dependencies:
 
-    axios expo ngrok react react-dom react-native react-native-elements react-native-gesture-handler react-native-reanimated react-native-web react-navigation react-navigation-stack react-navigation-tabs
+    axios expo ngrok react react-dom react-native react-native-elements react-native-gesture-handler react-native-reanimated react-native-web react-navigation react-navigation-stack react-navigation-tabs react-native-maps expo-cli
   
 Native App Dev Dependencies: 
 
