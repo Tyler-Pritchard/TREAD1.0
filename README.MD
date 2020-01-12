@@ -2,15 +2,15 @@ Brought to you by experts in city survival, criminal justice and modern mobile t
 
 Native App Dependencies:
 
-    Axios, expo, ngrok, react, react-dom, react-native, react-native-elements, react-native-gesture-handler, react-native-reanimated, react-native-web, react-navigation, react-navigation-stack, react-navigation-tabs
+    axios expo ngrok react react-dom react-native react-native-elements react-native-gesture-handler react-native-reanimated react-native-web react-navigation react-navigation-stack react-navigation-tabs
   
 Native App Dev Dependencies: 
 
-    babel-preset-expo, @babel/core
+    babel-preset-expo @babel/core
 
 Express API Dependencies:
 
-    bcrypt, express, jsonwebtoken, mongoose, nodemon
+    bcrypt express jsonwebtoken mongoose nodemon
 
 
 With Homebrew: 
