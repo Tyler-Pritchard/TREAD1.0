@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "TREAD",
-    "slug": "NativeApp",
+    "slug": "TREAD-Native",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -11,7 +11,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icons8-shoe-print-64.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
