@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "TREAD",
+    "description": "TREAD is the all-in-one pedestrian safety application, arming citizens with tools to avoid crime by providing situational awareness. To begin with, TREAD will provide traveling pedestrians a mobile application to create routes which will factor in local static crime data to influence the mapping algorithm to avoid high-risk areas.",
     "slug": "TREAD-Native",
     "privacy": "public",
     "sdkVersion": "36.0.0",
