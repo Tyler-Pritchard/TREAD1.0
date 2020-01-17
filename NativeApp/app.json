@@ -12,7 +12,7 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icons8-shoe-print-64.png",
+    "icon": "./assets/track-icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -25,6 +25,7 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.CodiB.TREAD",
       "supportsTablet": true
     }
   }
