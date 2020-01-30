@@ -6,7 +6,7 @@ const instance = axios.create({
     // baseURL: 'http://5b7d1f0a.ngrok.io'
 
     //AWS istance
-    baseURL: 'https://tread-api-dev.herokuapp.com/'
+    baseURL: 'https://tread-dev-api.herokuapp.com'
 });
 
 instance.interceptors.request.use(
