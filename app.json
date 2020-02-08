@@ -26,7 +26,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mytread.tread"
+      "bundleIdentifier": "com.tread.tread"
     }
   }
 }
