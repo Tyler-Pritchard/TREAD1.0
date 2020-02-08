@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "TREAD",
+    "name": "TREAD-TRACK",
     "description": "TREAD",
     "slug": "TREAD-Native",
     "privacy": "public",
@@ -26,7 +26,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.tread.tread"
+      "bundleIdentifier": "com.tread.track"
+      // "sku": "dreamingawake"
     }
   }
 }
