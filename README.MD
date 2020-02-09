@@ -1,3 +1,5 @@
+2/09/20 - Deployed to the App Store as a basic location tracking application.
+
 Brought to you by experts in city survival, criminal justice and modern mobile technology, TREAD is the all-in-one pedestrian safety application.  TREAD cannot guarantee a victimless society, but TREAD can arm citizens with tools to stop violent and property crimes by providing context and situational awareness.  To begin with, TREAD will provide traveling pedestrians a mobile application to create routes which will factor in local static crime data to influence the mapping algorithm to avoid high-risk areas.
 
 Native App Dependencies:
