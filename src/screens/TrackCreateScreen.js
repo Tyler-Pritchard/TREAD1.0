@@ -6,7 +6,7 @@ import { SafeAreaView, withNavigationFocus } from 'react-navigation';
 import Map from '../components/Map';
 import { Context as LocationContext } from '../context/LocationContext';
 import useLocation from '../hooks/useLocation';
-import SearchForm from '../components/Search Form';
+import SearchForm from '../components/SearchForm';
 import { FontAwesome } from '@expo/vector-icons';
 import Spacer from '../components/Spacer';
 
