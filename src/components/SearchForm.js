@@ -4,8 +4,8 @@ import Spacer from './Spacer';
 import { Context as LocationContext } from '../context/LocationContext';
 import useSaveTrack from '../hooks/useSaveTrack';
 
-const TrackForm = () => {
-    const { state: { name, recording, locations }, 
+const SearchForm = () => {
+    const { state: { name, recording, locations, destination }, 
         startRecording, 
         stopRecording, 
         changeName 
@@ -14,14 +14,30 @@ const TrackForm = () => {
 
     return (
         <>
+
             <Spacer>
-                <Input 
+            <Input 
+                value={destination}
+                onChangeText={changeName} 
+                placeholder="Destination" 
+            />
+            </Spacer>
+
+            <Spacer>
+            {recording ? (
+                <Button title="Search" onPress={stopRecording} />  
+            ) : (  
+                <Button title="Start Recording" onPress={startRecording} />
+            )}
+            </Spacer>
+            {/* <Spacer>
+                    <Input 
                     value={name}
                     onChangeText={changeName} 
                     placeholder="Enter name" 
                 />
-            </Spacer>
-            <Spacer>
+            </Spacer> */}
+            {/* <Spacer>
             {recording ? (
                 <Button title="Stop" onPress={stopRecording} />  
             ) : (  
@@ -32,9 +48,9 @@ const TrackForm = () => {
             {!recording && locations.length ? (
                 <Button title="Save Recording" onPress={saveTrack} />
             ) : null}
-            </Spacer>
+            </Spacer> */}
         </>
     );
 };
 
-export default TrackForm;
+export default SearchForm;

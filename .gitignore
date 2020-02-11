@@ -2,3 +2,4 @@ node_modules
 environment.js
 CertificateSigningRequest.certSigningRequest
 assets/ipa
+keys.txt
