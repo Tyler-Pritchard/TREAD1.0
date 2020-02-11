@@ -5,7 +5,7 @@ import { Context as LocationContext } from '../context/LocationContext';
 import useSaveTrack from '../hooks/useSaveTrack';
 
 const TrackForm = () => {
-    const { state: { name, recording, locations }, 
+    const { state: { name, recording, locations, destination }, 
         startRecording, 
         stopRecording, 
         changeName 
@@ -15,10 +15,17 @@ const TrackForm = () => {
     return (
         <>
             <Spacer>
-                <Input 
+                
+                {/* Track name for tracking feature
+                    <Input 
                     value={name}
                     onChangeText={changeName} 
                     placeholder="Enter name" 
+                /> */}
+                <Input 
+                    value={destination}
+                    onChangeText={changeName} 
+                    placeholder="Destination" 
                 />
             </Spacer>
             <Spacer>
