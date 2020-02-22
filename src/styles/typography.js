@@ -10,7 +10,7 @@ export const smallestFontSize = 8
 export const largeHeaderFontSize = 20
 export const headerFontSize = 18
 
-const base = {
+export const base = {
   alignItems: 'center',
   display: 'flex',
   flexDirection: 'row',

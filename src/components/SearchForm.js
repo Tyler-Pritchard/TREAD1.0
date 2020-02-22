@@ -1,56 +1,60 @@
-import React, { useContext } from 'react';
-import { Input, Button } from 'react-native-elements';
-import Spacer from './Spacer';
-import { Context as LocationContext } from '../context/LocationContext';
-import useSaveTrack from '../hooks/useSaveTrack';
+import React, { Component } from 'react';
+import { View, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import RNGooglePlaces from 'react-native-google-places';
+import { Buttons, Typography, Colors, Spacing } from '../styles';
 
-const SearchForm = () => {
-    const { state: { name, recording, locations, destination }, 
-        startRecording, 
-        stopRecording, 
-        changeName 
-    } = useContext(LocationContext);
-    const [saveTrack] = useSaveTrack();
 
-    return (
-        <>
 
-            <Spacer>
-            <Input 
-                value={destination}
-                onChangeText={changeName} 
-                placeholder="Destination" 
-            />
-            </Spacer>
+class SearchForm extends Component {
+    openSearchModal() {
+        RNGooglePlaces.openAutocompleteModal()
+        .then((place) => {
+            console.log(place);
+            // place represents user's selection from the
+            // suggestions and it is a simplified Google Place object.
+        })
+        .catch(error => console.log(error.message));  // error is a Javascript Error object
+      }
+     
+      render() {
+        return (
+          <View style={styles.container}>
 
-            <Spacer>
-            {recording ? (
-                <Button title="Search" onPress={stopRecording} />  
-            ) : (  
-                <Button title="Start Recording" onPress={startRecording} />
-            )}
-            </Spacer>
-            {/* <Spacer>
-                    <Input 
-                    value={name}
-                    onChangeText={changeName} 
-                    placeholder="Enter name" 
-                />
-            </Spacer> */}
-            {/* <Spacer>
-            {recording ? (
-                <Button title="Stop" onPress={stopRecording} />  
-            ) : (  
-                <Button title="Start Recording" onPress={startRecording} />
-            )}
-            </Spacer>
-            <Spacer>
-            {!recording && locations.length ? (
-                <Button title="Save Recording" onPress={saveTrack} />
-            ) : null}
-            </Spacer> */}
-        </>
-    );
+            <TouchableOpacity
+              style={styles.buttonText}
+              onPress={() => this.openSearchModal()}
+            >
+              <Text style={styles.header}>Pick a Place</Text>
+            </TouchableOpacity>
+          </View>
+        );
+      }
 };
+
+const styles = StyleSheet.create({
+  container: {
+    justifyContent: 'center',
+    borderRadius: 1,
+    borderWidth: 0.5,
+    borderColor: 'green',
+    height: 900,
+    width: "auto",
+    paddingTop: 10,
+    backgroundColor: Colors.background,
+    borderRadius: 5,
+    flex: 1,
+    paddingVertical: Spacing.base,
+},
+  buttonText: {
+    ...Buttons.text,
+  },
+  header: {
+    height: 10,
+    borderRadius: 4,
+    borderWidth: 0.5,
+    borderColor: 'red',
+    ...Typography.headerText,
+  }
+});
 
 export default SearchForm;
