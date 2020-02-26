@@ -10,3 +10,4 @@ export const largest = 28
 export const extraLarge = 50
 
 export const sectionPadding = small
+export const searchbarPadding = extraLarge

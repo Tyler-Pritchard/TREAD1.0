@@ -11,28 +11,26 @@ const TrackListScreen = ({ navigation }) => {
     return (
         <> 
             <View style={styles.container}>
-                    <NavigationEvents onWillFocus={fetchTracks} />
-                    <FlatList style={styles.buttonsContainer}
-                        data={state}
-                        keyExtractor={item => item._id}
-                        renderItem={({ item }) => {
+                <NavigationEvents onWillFocus={fetchTracks} />
+                <FlatList style={styles.buttonsContainer}
+                    data={state}
+                    keyExtractor={item => item._id}
+                    renderItem={({ item }) => {
+                        
+                        return ( 
+                            <TouchableOpacity 
+                                onPress={() => 
+                                    navigation.navigate('TrackDetail', { _id: item._id })
+                                }   
+                            >
+                                <ListItem 
+                                chevron 
+                                title={item.name}
+                                />
                             
-                            return ( 
-                                <TouchableOpacity 
-                                    onPress={() => 
-                                        navigation.navigate('TrackDetail', { _id: item._id })
-                                    }
-                                    
-                                >
-                                  
-                                    <ListItem 
-                                    chevron 
-                                    title={item.name}
-                                    />
-                               
-                                </TouchableOpacity>    
-                            );
-                        }}
+                            </TouchableOpacity>    
+                        );
+                    }}
                 />
             </View>
         </>
@@ -46,7 +44,7 @@ TrackListScreen.navigationOptions = {
 const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
-        marginBottom: 10,
+        marginBottom: 2,
         backgroundColor: Colors.background,
         borderRadius: 5,
         flex: 1,
