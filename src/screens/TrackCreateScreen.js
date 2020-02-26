@@ -9,6 +9,7 @@ import useLocation from '../hooks/useLocation';
 import SearchForm from '../components/SearchForm';
 import { FontAwesome } from '@expo/vector-icons';
 import Spacer from '../components/Spacer';
+import sectionPadding from '../styles/spacing';
 
 
 const TrackCreateScreen = ({ isFocused }) => {
@@ -20,19 +21,33 @@ const TrackCreateScreen = ({ isFocused }) => {
     const [err] = useLocation(isFocused || recording, callback);
  
     return (
-        <SafeAreaView forceInset={{ top: 'always' }}>
-            <Map /> 
+        <SafeAreaView style={styles.safeArea}>
+            <Map forceInset={{ top: 'always' }} style={styles.map} /> 
             {err ? <Text>Please enable location services</Text> : null}
-            <SearchForm />
+            <SearchForm style={styles.searchbar}/>
         </SafeAreaView>
     );
 };
 
 TrackCreateScreen.navigationOptions = {
     title: 'Add Track',
-    tabBarIcon: <FontAwesome name="plus" size={20} />
+    tabBarIcon: <FontAwesome name="plus" size={5} />
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        justifyContent: "space-around",
+        alignItems: "stretch"
+    },
+    searchbar: {
+        height: 300,
+        ...sectionPadding
+
+    },
+    map: {
+        ...sectionPadding
+    }
+});
 
 export default withNavigationFocus(TrackCreateScreen);

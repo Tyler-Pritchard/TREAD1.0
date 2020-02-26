@@ -44,7 +44,7 @@ TrackListScreen.navigationOptions = {
 const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
-        marginBottom: 10,
+        marginBottom: 2,
         backgroundColor: Colors.background,
         borderRadius: 5,
         flex: 1,
