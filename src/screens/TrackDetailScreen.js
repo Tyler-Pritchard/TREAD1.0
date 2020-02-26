@@ -4,6 +4,7 @@ import { Context as TrackContext } from '../context/TrackContext';
 import MapView, { Polyline } from 'react-native-maps';
 import { searchbarPadding } from '../styles/spacing';
 import { sectionBackground } from '../styles/colors';
+import { screenHeader } from '../styles/typography';
 
 const TrackDetailScreen = ({ navigation }) => {
     const { state } = useContext(TrackContext);
@@ -12,7 +13,8 @@ const TrackDetailScreen = ({ navigation }) => {
     const track = state.find(t => t._id === _id);
     const initialCoords = track.locations[0].coords;
 
-    return <>
+    return 
+        <>
         <Text style={styles.textStyle}>{track.name}</Text>
         <MapView
             initialRegion={{
@@ -24,7 +26,7 @@ const TrackDetailScreen = ({ navigation }) => {
         >
             <Polyline coordinates={track.locations.map(loc => loc.coords)} />
         </MapView>
-    </>
+        </>
 };
 
 const styles = StyleSheet.create({
@@ -34,9 +36,10 @@ const styles = StyleSheet.create({
         alignItems: "stretch"
     },
     textStyle: {
-        fontSize: 20,
+        ...screenHeader, 
         backgroundColor: sectionBackground,
-        ...searchbarPadding
+        paddingBottom: 10,
+        paddingTop: 10
     }
 });
 

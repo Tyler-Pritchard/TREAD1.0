@@ -1,6 +1,6 @@
 //import '../_mockLocation';
 import React, { useContext, useCallback } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Text, Button, Input } from 'react-native-elements';
 import { SafeAreaView, withNavigationFocus } from 'react-navigation';
 import Map from '../components/Map';
@@ -24,14 +24,14 @@ const TrackCreateScreen = ({ isFocused }) => {
         <SafeAreaView style={styles.safeArea}>
             <Map forceInset={{ top: 'always' }} style={styles.map} /> 
             {err ? <Text>Please enable location services</Text> : null}
-            <SearchForm style={styles.searchbar}/>
+            <SearchForm style={styles.searchbar} />
         </SafeAreaView>
     );
 };
 
 TrackCreateScreen.navigationOptions = {
     title: 'Add Track',
-    tabBarIcon: <FontAwesome name="plus" size={5} />
+    tabBarIcon: <FontAwesome name="plus" size={20} />
 };
 
 const styles = StyleSheet.create({
@@ -40,13 +40,12 @@ const styles = StyleSheet.create({
         justifyContent: "space-around",
         alignItems: "stretch"
     },
-    searchbar: {
-        height: 300,
-        ...sectionPadding
-
-    },
     map: {
         ...sectionPadding
+    },
+    searchbar: {
+        ...sectionPadding
+
     }
 });
 

@@ -33,26 +33,22 @@ class SearchForm extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center',
+    flex: 1,
+    justifyContent: 'space-around',
+    height: 100,
     borderRadius: 1,
-    borderWidth: 0.5,
-    borderColor: 'green',
-    height: 900,
-    width: "auto",
-    paddingTop: 10,
+    borderWidth: 2,
     backgroundColor: Colors.background,
     borderRadius: 5,
-    flex: 1,
-    paddingVertical: Spacing.base,
+    margin: 4
+
 },
   buttonText: {
-    ...Buttons.text,
+    ...Buttons.text
   },
   header: {
-    height: 10,
-    borderRadius: 4,
-    borderWidth: 0.5,
-    borderColor: 'red',
+    backgroundColor: 'white',
+    height: 50,
     ...Typography.headerText,
   }
 });
