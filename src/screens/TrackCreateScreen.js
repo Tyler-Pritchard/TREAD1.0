@@ -1,19 +1,17 @@
 //import '../_mockLocation';
 import React, { useContext, useCallback } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { Text, Button, Input } from 'react-native-elements';
+import { Text } from 'react-native-elements';
+import { KeyboardAvoidingView } from 'react-native';
 import { SafeAreaView, withNavigationFocus } from 'react-navigation';
 import Map from '../components/Map';
 import { Context as LocationContext } from '../context/LocationContext';
 import useLocation from '../hooks/useLocation';
 import SearchForm from '../components/SearchForm';
-import { FontAwesome } from '@expo/vector-icons';
-import Spacer from '../components/Spacer';
-import sectionPadding from '../styles/spacing';
 
 
 const TrackCreateScreen = ({ isFocused }) => {
-    const { state: { name, recording, changeName }, addLocation } = useContext(LocationContext);
+    const { state: { recording }, addLocation } = useContext(LocationContext);
     
     const callback = useCallback(location => {
         addLocation(location, recording);
@@ -21,31 +19,51 @@ const TrackCreateScreen = ({ isFocused }) => {
     const [err] = useLocation(isFocused || recording, callback);
  
     return (
-        <SafeAreaView style={styles.safeArea}>
-            <Map forceInset={{ top: 'always' }} style={styles.map} /> 
-            {err ? <Text>Please enable location services</Text> : null}
-            <SearchForm style={styles.searchbar} />
-        </SafeAreaView>
+        <KeyboardAvoidingView
+                behavior={Platform.OS === "ios" ? "padding" : null}
+                style={{ flex: 1 }}
+            >
+            <SafeAreaView style={styles.container}>
+                <View style={styles.inner}>
+                    <View style={styles.map}>
+                        <Map forceInset={{ top: 'always' }}  /> 
+                        {err ? <Text>Please enable location services</Text> : null}
+                    </View>   
+                    <View style={styles.searchBar}>
+                        <SearchForm />
+                    </View>
+                </View>
+            </SafeAreaView>
+        </KeyboardAvoidingView>
     );
 };
 
-TrackCreateScreen.navigationOptions = {
-    title: 'Add Track',
-    tabBarIcon: <FontAwesome name="plus" size={20} />
-};
-
 const styles = StyleSheet.create({
-    safeArea: {
+    container: {
+        backgroundColor: "gray",
         flex: 1,
-        justifyContent: "space-around",
-        alignItems: "stretch"
+        flexDirection: "column",
+        justifyContent: "space-evenly",
+        marginBottom: 50,
+        borderColor: "green",
+        borderWidth: 2
+    },
+    inner: {
+        justifyContent: "flex-end",
+        borderColor: "red",
+        borderWidth: 2,
     },
     map: {
-        ...sectionPadding
+        borderColor: "blue",
+        borderWidth: 3,
+        marginBottom: 10,
+        marginTop: 0
     },
-    searchbar: {
-        ...sectionPadding
-
+    searchBar: {
+        borderColor: "orange",
+        borderWidth: 3,
+        marginTop: 10,
+        marginBottom: 0
     }
 });
 
