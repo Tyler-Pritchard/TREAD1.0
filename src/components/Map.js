@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { StyleSheet, ActivityIndicator } from 'react-native';
-import MapView, { Polyline, Circle, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Polyline, PROVIDER_GOOGLE } from 'react-native-maps';
 import { Context as LocationContext } from '../context/LocationContext';
 
 const Map = () => {

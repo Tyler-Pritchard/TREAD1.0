@@ -45,22 +45,22 @@ const styles = StyleSheet.create({
         flexDirection: "column",
         justifyContent: "space-evenly",
         marginBottom: 50,
-        borderColor: "green",
+        borderColor: "black",
         borderWidth: 2
     },
     inner: {
         justifyContent: "flex-end",
-        borderColor: "red",
-        borderWidth: 2,
+        // borderColor: "red",
+        // borderWidth: 2,
     },
     map: {
-        borderColor: "blue",
-        borderWidth: 3,
+        // borderColor: "blue",
+        // borderWidth: 3,
         marginBottom: 10,
         marginTop: 0
     },
     searchBar: {
-        borderColor: "orange",
+        borderColor: "black",
         borderWidth: 3,
         marginTop: 10,
         marginBottom: 0
