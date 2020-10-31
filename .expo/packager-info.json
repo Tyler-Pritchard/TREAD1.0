@@ -1,9 +1,10 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 2545,
-  "expoServerNgrokUrl": "https://x7-fex.tylerpritchard.tread.exp.direct",
-  "packagerNgrokUrl": "https://packager.x7-fex.tylerpritchard.tread.exp.direct",
-  "ngrokPid": 2558
+  "packagerPort": 19003,
+  "packagerPid": 19936,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }
