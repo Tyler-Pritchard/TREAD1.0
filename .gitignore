@@ -3,3 +3,11 @@ environment.js
 CertificateSigningRequest.certSigningRequest
 assets/ipa
 keys.txt
+package-lock.json
+yarn.lock
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
