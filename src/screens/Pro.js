@@ -44,10 +44,10 @@ export default class Pro extends React.Component {
               </Text>
               <Block row style={{ marginTop: theme.SIZES.BASE * 1.5, marginBottom: theme.SIZES.BASE * 4 }}>
                 <Image
-                  source={require('../assets/images/ios.png')}
+                  source={require('../../assets/images/ios.png')}
                   style={{ height: 38, width: 82, marginRight: theme.SIZES.BASE * 1.5 }} />
                 <Image
-                  source={require('../assets/images/android.png')}
+                  source={require('../../assets/images/android.png')}
                   style={{ height: 38, width: 140 }} />
               </Block>
               <Button
