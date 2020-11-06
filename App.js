@@ -7,6 +7,7 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import AccountScreen from './src/screens/AccountScreen';
+import LandingScreen from './src/screens/LandingScreen';
 import SignupScreen from './src/screens/SignupScreen';
 import SigninScreen from './src/screens/SigninScreen';
 import TrackCreateScreen from './src/screens/TrackCreateScreen';
@@ -61,6 +62,7 @@ trackListFlow.navigationOptions = {
 };
 
 const switchNavigator = createSwitchNavigator({
+  Landing: LandingScreen,
   ResolveAuth: ResolveAuthScreen,
   loginFlow: createStackNavigator({
     Signup: SignupScreen,

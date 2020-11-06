@@ -1,3 +1,4 @@
+<script src="http://localhost:8097"></script>
 import React from 'react';
 import { ImageBackground, StyleSheet, StatusBar, Dimensions } from 'react-native';
 import { Block, Button, Text, theme } from 'galio-framework';
@@ -7,7 +8,7 @@ const { height, width } = Dimensions.get('screen');
 import materialTheme from '../constants/Theme';
 import Images from '../constants/Images';
 
-export default class Onboarding extends React.Component {
+export default class LandingScreen extends React.Component {
   render() {
     const { navigation } = this.props;
 
@@ -16,7 +17,7 @@ export default class Onboarding extends React.Component {
         <StatusBar barStyle="light-content" />
         <Block flex center>
           <ImageBackground
-            source={{  uri: Images.Onboarding }}
+            source={{  uri: Images.Landing }}
             style={{ height: height, width: width, marginTop: '-55%', zIndex: 1 }}
           />
         </Block>
@@ -24,13 +25,13 @@ export default class Onboarding extends React.Component {
           <Block flex space="around" style={{ zIndex: 2 }}>
             <Block>
               <Block>
-                <Text color="white" size={60}>Material</Text>
+                <Text color="white" size={60}>TREAD</Text>
               </Block>
               <Block row>
-                <Text color="white" size={60}>Kit</Text>
+                <Text color="white" size={40}>for Situational Awareness</Text>
               </Block>
               <Text size={16} color='rgba(255,255,255,0.6)'>
-                Fully coded React Native components.
+                Don't be a victim. Be Aware.
               </Text>
             </Block>
             <Block center>
@@ -39,7 +40,16 @@ export default class Onboarding extends React.Component {
                 style={styles.button}
                 color={materialTheme.COLORS.BUTTON_COLOR}
                 onPress={() => navigation.navigate('App')}>
-                GET STARTED
+                SIGN IN
+              </Button>
+            </Block>
+            <Block center>
+              <Button
+                shadowless
+                style={styles.button}
+                color={materialTheme.COLORS.BUTTON_COLOR}
+                onPress={() => navigation.navigate('App')}>
+                SIGN UP
               </Button>
             </Block>
           </Block>

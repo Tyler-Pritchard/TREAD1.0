@@ -3,7 +3,7 @@ import { AsyncStorage } from 'react-native';
 
 const instance = axios.create({
     //ngrok url provided by running 'ngrok http <portNumberOfAPIInstance>' from separate terminal window
-     baseURL: 'http://ee1e88db4229.ngrok.io'
+     baseURL: 'http://2caeae7c0c3b.ngrok.io'
 
     //AWS istance
     //baseURL: 'https://tread-dev-api.herokuapp.com/'

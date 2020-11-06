@@ -7,7 +7,7 @@ import { Block, Text, theme } from "galio-framework";
 
 import ComponentsScreen from '../screens/Components';
 import HomeScreen from '../screens/Home';
-import OnboardingScreen from '../screens/Onboarding';
+import LandingScreen from '../screens/LandingScreen';
 import ProfileScreen from '../screens/Profile';
 import ProScreen from '../screens/Pro';
 import SettingsScreen from '../screens/Settings';
@@ -299,12 +299,12 @@ function AppStack(props) {
   );
 }
 
-export default function OnboardingStack(props) {
+export default function LandingStack(props) {
   return (
     <Stack.Navigator mode="card" headerMode="none">
       <Stack.Screen
-        name="Onboarding"
-        component={OnboardingScreen}
+        name="Landing"
+        component={LandingScreen}
         option={{
           headerTransparent: true
         }}
@@ -377,8 +377,8 @@ const HomeStack = createStackNavigator({
 
 const AppStack = createDrawerNavigator(
   {
-    Onboarding: {
-      screen: OnboardingScreen,
+    Landing: {
+      screen: LandingScreen,
       navigationOptions: {
         drawerLabel: () => {},
       },

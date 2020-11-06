@@ -1,4 +1,6 @@
-import React, { useContext } from 'react';
+import * as React from 'react';
+import { useContext } from 'react';
+
 import { View, StyleSheet, Text } from 'react-native';
 import { NavigationEvents } from 'react-navigation';
 import AuthForm from '../components/AuthForm';
@@ -20,7 +22,7 @@ const SigninScreen = () => {
       });
     
       React.useEffect(() => {
-        if (response.type === 'success') {
+        if (response?.type === 'success') {
           const { authentication } = response;
           }
       }, [response]);
@@ -42,12 +44,12 @@ const SigninScreen = () => {
 
             />
             <Button
-          disabled={!request}
-          title="Login"
-          onPress={() => {
-            promptAsync();
-            }}
-        />
+                disabled={!request}
+                title="Login"
+                onPress={() => {
+                    promptAsync();
+                }}
+            />
         </View>
     )
 };
