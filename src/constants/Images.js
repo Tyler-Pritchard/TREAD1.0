@@ -1,4 +1,5 @@
-const Onboarding = 'https://images.unsplash.com/photo-1505995433366-e12047f3f144?fit=crop&w=840&q=80';
+import './magnifying-glass-footprint.png';
+const Landing = './magnifying-glass-footprint.png';
 const Pro = 'https://images.unsplash.com/photo-1485796826113-174aa68fd81b?fit=crop&w=840&q=80';
 const Products = {
   'Accessories': 'https://source.unsplash.com//l1MCA0VyNrk/840x840',
@@ -17,7 +18,7 @@ const Viewed = [
 ];
 
 export default {
-  Onboarding,
+  Landing,
   Pro,
   Products,
   Profile,
