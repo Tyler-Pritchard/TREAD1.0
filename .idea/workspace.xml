@@ -6,20 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0f5e45eb-b5f2-4ab6-94ba-11d65d93ba22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
-<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/tracker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/tracker.js" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TREAD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TREAD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/tracker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/tracker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Images.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Images.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigation/Screens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/Screens.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/Onboarding.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/SigninScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/SigninScreen.js" afterDir="false" />
->>>>>>> 573bbcf8dbef37311a9c1e13e7845d278a63e4c5
+      <change beforePath="$PROJECT_DIR$/src/screens/LandingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/LandingScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-<<<<<<< HEAD
-=======
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
->>>>>>> 573bbcf8dbef37311a9c1e13e7845d278a63e4c5
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -56,16 +42,13 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-<<<<<<< HEAD
-    <state x="782" y="123" width="717" height="677" key="AVDManager" timestamp="1605761683902">
+    <state x="782" y="123" width="717" height="677" key="AVDManager" timestamp="1605810200544">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="782" y="123" width="717" height="677" key="AVDManager/0.0.1600.900@0.0.1600.900" timestamp="1605761683902" />
-=======
-    <state x="782" y="100" width="717" height="700" key="AVDManager" timestamp="1604683592523">
+    <state x="782" y="123" width="717" height="677" key="AVDManager/0.0.1600.900@0.0.1600.900" timestamp="1605810200544" />
+    <state x="601" y="91" key="SettingsEditor" timestamp="1605766656697">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="782" y="100" width="717" height="700" key="AVDManager/0.0.1600.900@0.0.1600.900" timestamp="1604683592523" />
->>>>>>> 573bbcf8dbef37311a9c1e13e7845d278a63e4c5
+    <state x="601" y="91" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1605766656697" />
   </component>
 </project>

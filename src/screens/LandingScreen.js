@@ -11,7 +11,6 @@ import Images from '../constants/Images';
 export default class LandingScreen extends React.Component {
   render() {
     const { navigation } = this.props;
-
     return (
       <Block flex style={styles.container}>
         <StatusBar barStyle="light-content" />
@@ -39,7 +38,7 @@ export default class LandingScreen extends React.Component {
                 shadowless
                 style={styles.button}
                 color={materialTheme.COLORS.BUTTON_COLOR}
-                onPress={() => navigation.navigate('App')}>
+                onPress={() => navigation.navigate('SigninScreen')}>
                 SIGN IN
               </Button>
             </Block>
@@ -48,7 +47,7 @@ export default class LandingScreen extends React.Component {
                 shadowless
                 style={styles.button}
                 color={materialTheme.COLORS.BUTTON_COLOR}
-                onPress={() => navigation.navigate('App')}>
+                onPress={() => navigation.navigate('SignupScreen')}>
                 SIGN UP
               </Button>
             </Block>

@@ -33,6 +33,7 @@
     "galio-framework": "^0.7.1",
     "prop-types": "^15.0",
     "react": "16.13.1",
+    "react-devtools": "^4.10.0",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.3.tar.gz",
     "react-native-app-upgrade-core": "^1.0.6",
