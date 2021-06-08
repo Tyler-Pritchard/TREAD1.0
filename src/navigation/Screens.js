@@ -1,17 +1,11 @@
 import React from 'react';
-import { Easing, Animated, Dimensions } from 'react-native';
+import { Dimensions } from 'react-native';
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-
-import { Block, Text, theme } from "galio-framework";
 
 import ComponentsScreen from '../screens/Components';
 import HomeScreen from '../screens/Home';
 import LandingScreen from '../screens/LandingScreen';
-import ProfileScreen from '../screens/Profile';
-import ProScreen from '../screens/Pro';
-import SettingsScreen from '../screens/Settings';
-
 import CustomDrawerContent from './Menu';
 import { Icon, Header } from '../components';
 import { Images, materialTheme } from "../constants/";
@@ -59,15 +53,6 @@ function SettingsStack(props) {
       mode="card"
       headerMode="screen"
     >
-      <Stack.Screen
-        name="Settings"
-        component={SettingsScreen}
-        options={{
-          header: ({ navigation, scene }) => (
-            <Header title="Settings" scene={scene} navigation={navigation} />
-          )
-        }}
-      />
     </Stack.Navigator>
   );
 }

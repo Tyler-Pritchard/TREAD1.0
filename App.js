@@ -2,7 +2,6 @@ import React from 'react';
 import { Platform, StatusBar, Image } from 'react-native';
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
-import { Block, GalioProvider } from 'galio-framework';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
@@ -84,7 +83,6 @@ state = {
 export default () => {
   return (
     <NavigationContainer>
-      <GalioProvider theme={materialTheme}>
         <TrackProvider>
           <LocationProvider>
             <AuthProvider>
@@ -95,7 +93,6 @@ export default () => {
             </AuthProvider>
           </LocationProvider>
         </TrackProvider>
-      </GalioProvider>
     </NavigationContainer>
   );
 };
