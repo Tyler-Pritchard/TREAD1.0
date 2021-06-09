@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StatusBar, Image } from 'react-native';
+import { Platform, StatusBar, Image, View } from 'react-native';
 import { AppLoading } from 'expo';
 import { Asset } from 'expo-asset';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
@@ -19,26 +19,12 @@ import { Provider as LocationProvider } from './src/context/LocationContext';
 import { Provider as TrackProvider } from './src/context/TrackContext';
 import { FontAwesome } from '@expo/vector-icons';
 
-import { Images, products, materialTheme } from './src/constants/';
-
 import { NavigationContainer } from '@react-navigation/native';
-
-import Screens from './src/navigation/Screens';
 
 // Before rendering any navigation stack
 import { enableScreens } from 'react-native-screens';
 enableScreens();
 
-// cache app images
-const assetImages = [
-  Images.Pro,
-  Images.Profile,
-  Images.Avatar,
-  Images.Onboarding,
-];
-
-// cache product images
-products.map(product => assetImages.push(product.image));
 
 function cacheImages(images) {
   return images.map(image => {
@@ -86,10 +72,10 @@ export default () => {
         <TrackProvider>
           <LocationProvider>
             <AuthProvider>
-              <Block flex>
+              <View>
                 {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
                   <App ref={(navigator) => { setNavigator(navigator) }} />
-              </Block>
+              </View>
             </AuthProvider>
           </LocationProvider>
         </TrackProvider>

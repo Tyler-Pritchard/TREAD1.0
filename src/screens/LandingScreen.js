@@ -1,10 +1,11 @@
 <script src="http://localhost:8097"></script>
 import React from 'react';
-import { ImageBackground, StyleSheet, StatusBar, Dimensions, View, Text, Button } from 'react-native';
-
+import { ImageBackground, StyleSheet, StatusBar, Dimensions, View, Text } from 'react-native';
+import { Button } from 'react-native-elements';
 const { height, width } = Dimensions.get('screen');
 
 import Images from '../constants/Images';
+import { white } from '../styles/colors';
 
 export default class LandingScreen extends React.Component {
   render() {
@@ -62,5 +63,6 @@ const styles = StyleSheet.create({
   button: {
     shadowRadius: 0,
     shadowOpacity: 0,
+    color: "white"
   },
 });

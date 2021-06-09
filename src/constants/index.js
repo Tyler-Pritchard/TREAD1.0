@@ -4,7 +4,6 @@ import utils from './utils';
 
 export {
   Images,
-  products,
   materialTheme,
   utils,
 }

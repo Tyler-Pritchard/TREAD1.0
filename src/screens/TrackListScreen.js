@@ -24,8 +24,9 @@ const TrackListScreen = ({ navigation }) => {
                                 }   
                             >
                                 <ListItem 
-                                chevron 
-                                title={item.name}
+                                // chevron 
+                                title="ITEM PLACEHOLDER"
+                                // title={item.name}
                                 />
                             
                             </TouchableOpacity>    
